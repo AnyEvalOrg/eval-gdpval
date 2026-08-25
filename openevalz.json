@@ -1,0 +1,54 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "gdpval",
+    "slug": "gdpval",
+    "title": "GDPval",
+    "group": "Assistants",
+    "tags": [
+      "Agent"
+    ],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/gdpval",
+    "inspect_ai": "0.3.260",
+    "eval_version": "2-A",
+    "dependency": "gdpval"
+  },
+  "execution": {
+    "class": "sandbox-local",
+    "cost_class": "high",
+    "sandbox": [
+      "solver"
+    ],
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "gdpval",
+      "samples": 220
+    }
+  ],
+  "total_samples": 220,
+  "external_assets": [
+    {
+      "type": "huggingface",
+      "source": "openai/gdpval",
+      "state": "pinned"
+    },
+    {
+      "type": "huggingface",
+      "source": "openai/gdpval",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
